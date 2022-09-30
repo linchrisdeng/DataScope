@@ -1,0 +1,28 @@
+{
+    "ExtractionRequest": {
+        "@odata.type": "#DataScope.Select.Api.Extractions.ExtractionRequests.TickHistoryTimeAndSalesExtractionRequest",
+        "ContentFieldNames": [
+            "Trade - Price"],
+        "IdentifierList": {
+            "@odata.type": "#DataScope.Select.Api.Extractions.ExtractionRequests.InstrumentIdentifierList",
+            "InstrumentIdentifiers": [
+                {"Identifier": "AAPL.O", "IdentifierType": "Ric"}, 
+                {"Identifier": "IBM.N", "IdentifierType": "Ric"}
+            ],
+            "ValidationOptions": {
+                "AllowHistoricalInstruments": "True"
+            },
+            "UseUserPreferencesForValidationOptions": "False"
+        },
+        "Condition": {
+            "MessageTimeStampIn": "LocalExchangeTime",
+            "DateRangeTimeZone": "Local Exchange Time Zone",
+            "ReportDateRangeType": "Range",
+            "QueryStartDate": "2021-12-25T09:30:00.000Z",
+            "QueryEndDate":   "2022-01-05T09:35:00.000Z",
+            "DisplaySourceRIC": "True",
+            "TimeRangeMode": "Window"
+        }
+    }
+}
+
